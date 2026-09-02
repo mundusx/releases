@@ -15,8 +15,29 @@ contains OS-qualified assets rather than maintaining a branch per operating syst
 Every published binary is accompanied by a SHA-256 checksum. Products that support signed release
 metadata also include `release-manifest.json` and `release-manifest.json.sig`.
 
-Production installers use `https://downloads.mundusx.ai/prod/latest/<asset>`. That stable channel
-redirects an explicit allowlist of distributable filenames to the latest release in this repository.
+The current production channel is the
+[`opengpu-prod` release](../../releases/tag/opengpu-prod).
+
+## Install OpenGPU
+
+Windows PowerShell:
+
+```powershell
+$script = Join-Path $env:TEMP "mundusx-install.ps1"; Invoke-WebRequest -Uri "https://github.com/mundusx/releases/releases/download/opengpu-prod/install.ps1" -OutFile $script; powershell -NoProfile -ExecutionPolicy Bypass -File $script
+```
+
+Linux x86_64, Linux ARM64 (including GX10), or Apple Silicon macOS:
+
+```bash
+curl -fsSL https://github.com/mundusx/releases/releases/download/opengpu-prod/install.sh | bash
+```
+
+Apple Silicon users can alternatively download the
+[`MundusX-OpenGPU-Apple-Silicon.pkg`](../../releases/download/opengpu-prod/MundusX-OpenGPU-Apple-Silicon.pkg).
+
+After installation, contributors run `opengpu install` to choose their own
+contribution cap, concurrency, runtime, and model. Cargo and Rust are not
+required.
 
 ## Security boundary
 
