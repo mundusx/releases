@@ -34,6 +34,8 @@ curl -fsSL https://github.com/mundusx/releases/releases/download/opengpu-prod/in
 
 Apple Silicon users can alternatively download the
 [`MundusX-OpenGPU-Apple-Silicon.pkg`](../../releases/download/opengpu-prod/MundusX-OpenGPU-Apple-Silicon.pkg).
+The current package is checksum-verified but not yet Apple Developer ID signed
+or notarized, so macOS may require an explicit Open action.
 
 After installation, contributors run `opengpu install` to choose their own
 contribution cap, concurrency, runtime, and model. Cargo and Rust are not
