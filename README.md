@@ -15,6 +15,9 @@ contains OS-qualified assets rather than maintaining a branch per operating syst
 Every published binary is accompanied by a SHA-256 checksum. Products that support signed release
 metadata also include `release-manifest.json` and `release-manifest.json.sig`.
 
+Production installers use `https://downloads.mundusx.ai/prod/latest/<asset>`. That stable channel
+redirects an explicit allowlist of distributable filenames to the latest release in this repository.
+
 ## Security boundary
 
 This repository must contain distributable binaries, checksums, signed manifests, and end-user
