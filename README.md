@@ -49,3 +49,7 @@ environment files, logs, user data, or internal deployment configuration.
 
 Report security concerns privately to the MundusX maintainers. Do not disclose a suspected
 vulnerability in a public issue.
+
+## License
+
+Project-owned repository source and documentation are licensed under [Apache License 2.0](LICENSE). Distributed packages and third-party components retain their applicable licenses and notices.
